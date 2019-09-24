@@ -92,8 +92,42 @@ function plotsConstructor(importedData) {
     var barData = [barTrace];
 
     var barLayout = {
-        title: 'OTU_ID & Sample_Values'
-    }
+        title: 'Top 10: otu_ids & sample_values',
+        xaxis: {
+          title: 'sample_values',
+          titlefont: {
+            family: 'Arial, sans-serif',
+            size: 18,
+            color: '#2a3439'
+          },
+          showticklabels: true,
+          tickangle: 'auto',
+          tickfont: {
+            family: 'Old Standard TT, serif',
+            size: 14,
+            color: '#2a3439'
+          },
+          exponentformat: 'e',
+          showexponent: 'all'
+        },
+        yaxis: {
+          title: 'otu_ids',
+          titlefont: {
+            family: 'Arial, sans-serif',
+            size: 18,
+            color: '#2a3439'
+          },
+          showticklabels: true,
+          tickangle: 'auto',
+          tickfont: {
+            family: 'Old Standard TT, serif',
+            size: 14,
+            color: '#2a3439'
+          },
+          exponentformat: 'e',
+          showexponent: 'all'
+        }
+      };
 
     var barChart = d3.selectAll('#bar').node();
 
@@ -140,7 +174,7 @@ function plotsConstructor(importedData) {
             color: '#2a3439'
           },
           showticklabels: true,
-          tickangle: 45,
+          tickangle: 'auto',
           tickfont: {
             family: 'Old Standard TT, serif',
             size: 14,
