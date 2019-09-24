@@ -176,7 +176,7 @@ function buildTable(filteredMeta) {
 
 function initPlots() {
 
-    d3.json('samples.json').then((importedData) => {
+    d3.json('../samples.json').then((importedData) => {
 
         populateDropdown(importedData);
         plotsConstructor(importedData);
@@ -190,7 +190,7 @@ d3.selectAll('#selDataset').on('change', updatePage)
 
 function updatePage() {
 
-    d3.json('samples.json').then((importedData) => {
+    d3.json('../samples.json').then((importedData) => {
 
         plotsConstructor(importedData);     
         d3.select('tbody').html('')   
