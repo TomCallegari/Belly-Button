@@ -114,7 +114,13 @@ function plotsConstructor(importedData) {
     var bubbleData = [bubbleTrace];
 
     var bubbleLayout = {
-        title: 'OTU_IDs & Sample_Values'
+        title: 'OTU_IDs & Sample_Values',
+        xaxis: {
+            title: 'OTU_IDs'
+        },
+        yaxis: {
+            title: 'SAMPLE_VALUES'
+        }
     }        
 
     var bubbleChart = d3.selectAll('#bubble').node();
@@ -143,7 +149,14 @@ function plotsConstructor(importedData) {
             }        
     ];
 
-    var gaugeLayout = { width: 600, height: 450, margin: { t: 0, b: 0}};
+    var gaugeLayout = { 
+        width: 600, 
+        height: 450, 
+        margin: { 
+            t: 0, 
+            b: 0
+            }
+        };
 
     var gaugeChart = d3.selectAll('#gauge').node();
 
