@@ -114,14 +114,42 @@ function plotsConstructor(importedData) {
     var bubbleData = [bubbleTrace];
 
     var bubbleLayout = {
-        title: 'OTU_IDs & Sample_Values',
+        title: 'otu_ids & sample_values',
         xaxis: {
-            title: 'OTU_IDs'
+          title: 'otu_ids',
+          titlefont: {
+            family: 'Arial, sans-serif',
+            size: 18,
+            color: '#2a3439'
+          },
+          showticklabels: true,
+          tickangle: 'auto',
+          tickfont: {
+            family: 'Old Standard TT, serif',
+            size: 14,
+            color: '#2a3439'
+          },
+          exponentformat: 'e',
+          showexponent: 'all'
         },
         yaxis: {
-            title: 'SAMPLE_VALUES'
+          title: 'sample_values',
+          titlefont: {
+            family: 'Arial, sans-serif',
+            size: 18,
+            color: '#2a3439'
+          },
+          showticklabels: true,
+          tickangle: 45,
+          tickfont: {
+            family: 'Old Standard TT, serif',
+            size: 14,
+            color: '#2a3439'
+          },
+          exponentformat: 'e',
+          showexponent: 'all'
         }
-    }        
+      };     
 
     var bubbleChart = d3.selectAll('#bubble').node();
 
